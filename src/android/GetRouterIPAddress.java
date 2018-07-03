@@ -43,7 +43,7 @@ public class GetRouterIPAddress extends CordovaPlugin {
 	}
 
 	private String getRouterIPAddress() {
-		WifiManager wifiManager = (WifiManager) cordova.getActivity().getSystemService(Context.WIFI_SERVICE);
+		WifiManager wifiManager = (WifiManager) cordova.getActivity().getApplicationContext().getSystemService(Context.WIFI_SERVICE);
 		DhcpInfo dhcp = wifiManager.getDhcpInfo();
 		int ip = dhcp.gateway;
 		return formatIP(ip);
