@@ -27,8 +27,11 @@
 
         <header-file src="src/ios/CDVGetRouterIPAddress.h" />
         <source-file src="src/ios/CDVGetRouterIPAddress.m" />
-        <header-file src="src/ios/RouterAndRoutes.h" />
-        <source-file src="src/ios/RouterAndRoutes.m" />
+        <header-file src="src/ios/FGRoute.h" />
+        <source-file src="src/ios/FGRoute.m" />
+        <header-file src="src/ios/IpHelper.h" />
+        <source-file src="src/ios/IpHelper.c" />
+        <header-file src="src/ios/route.h" />
     </platform>
 
     <platform name="android">

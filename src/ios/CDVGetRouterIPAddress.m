@@ -1,12 +1,12 @@
 #import "CDVGetRouterIPAddress.h"
-#import "RouterAndRoutes.h"
+#import "FGRoute.h"
 
 @implementation CDVGetRouterIPAddress
 
 - (void) getRouterIPAddress:(CDVInvokedUrlCommand*)command
 {
     CDVPluginResult* pluginResult = nil;
-    NSString* ipaddr = [Route_Info getRouterIpAddress];
+    NSString* ipaddr = [FGRoute getGatewayIP];
 
     if (ipaddr != nil && ![ipaddr isEqualToString:@"error"]) {
         pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:ipaddr];
@@ -18,4 +18,3 @@
 }
 
 @end
-
